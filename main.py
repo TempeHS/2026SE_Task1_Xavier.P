@@ -23,7 +23,7 @@ logging.basicConfig(
 
 # Generate a unique basic 16 key: https://acte.ltd/utils/randomkeygen
 app = Flask(__name__)
-app.secret_key = b"_53oi3uriq9pifpff;apl"
+app.secret_key = b"_5TvTgyH61Hn1pr9v;apl"
 csrf = CSRFProtect(app)
 
 
@@ -82,7 +82,8 @@ def form():
 def signup():
     if request.method == "POST":
         email = request.form["email"]
-        text = request.form["text"]
+        password = request.form["password"]
+        dbHandler.insertContact(email, password)
         return render_template("/signup.html")
     else:
         return render_template("/signup.html")

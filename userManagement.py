@@ -10,3 +10,11 @@ def getUsers():
     con.close()
     return cur
 
+
+def insertContact(email, password):
+    con = sql.connect("database/data_source.db")
+    cur = con.cursor()
+    cur.execute("INSERT INTO emails (email) VALUES (?)", (email))
+    cur.execute("INSERT INTO passwords (password) VALUES (?)", (password))
+    con.commit()
+    con.close()
