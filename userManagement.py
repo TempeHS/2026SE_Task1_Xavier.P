@@ -3,18 +3,19 @@ import bcrypt
 
 
 ### example
-def getUsers():
+def getUsers(email):
     con = sql.connect("databaseFiles/database.db")
     cur = con.cursor()
-    cur.execute("SELECT * FROM id7-tusers")
+    cur.execute("SELECT password FROM users WHERE email = ?", (email,))
+    data = cur.fetchone()
+    data = data[0]
     con.close()
-    return cur
+    return data
 
 
 def insertContact(email, password):
-    con = sql.connect("database/data_source.db")
+    con = sql.connect("databaseFiles/database.db")
     cur = con.cursor()
-    cur.execute("INSERT INTO emails (email) VALUES (?)", (email))
-    cur.execute("INSERT INTO passwords (password) VALUES (?)", (password))
+    cur.execute("INSERT INTO users (email, password) VALUES (?, ?)", (email, password))
     con.commit()
     con.close()

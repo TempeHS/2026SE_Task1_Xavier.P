@@ -10,6 +10,8 @@ import logging
 
 import userManagement as dbHandler
 
+import bcrypt
+
 # Code snippet for logging a message
 # app.logger.critical("message")
 
@@ -78,12 +80,32 @@ def form():
         return render_template("/form.html")
 
 
+@app.route("/login.html", methods=["POST", "GET"])
+def login():
+    if request.method == "POST":
+        email = request.form["email"]
+        password = request.form["password"]
+        print(password)
+        print(type(password))
+        password = password.encode()
+        print(type(password))
+        hashedpw = dbHandler.getUsers(email)
+        if bcrypt.checkpw(password, hashedpw):
+            return render_template("/app.html")
+        else:
+            return render_template("/login.html")
+    else:
+        return render_template("/login.html")
+
+
 @app.route("/signup.html", methods=["POST", "GET"])
 def signup():
     if request.method == "POST":
         email = request.form["email"]
         password = request.form["password"]
-        dbHandler.insertContact(email, password)
+        encodedpass = password.encode()
+        hashedpw = bcrypt.hashpw(encodedpass, bcrypt.gensalt())
+        dbHandler.insertContact(email, hashedpw)
         return render_template("/signup.html")
     else:
         return render_template("/signup.html")

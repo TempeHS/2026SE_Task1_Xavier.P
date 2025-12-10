@@ -12,6 +12,7 @@
           id="floatingInput"
           name="email"
           placeholder="name@example.com"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
         />
         <label for="floatingInput">Email address</label>
       </div>
@@ -41,6 +42,7 @@
           Sign in here!
         </a>
       </p>
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
     </form>
   </div>
   <div class="row"></div>
