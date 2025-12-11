@@ -1338,3 +1338,224 @@
 2025-12-11 04:00:13,758 127.0.0.1 - - [11/Dec/2025 04:00:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
 2025-12-11 04:00:13,848 127.0.0.1 - - [11/Dec/2025 04:00:13] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
 2025-12-11 04:00:13,872 127.0.0.1 - - [11/Dec/2025 04:00:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 21:57:27,220 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.24:5000
+2025-12-11 21:57:27,221 [33mPress CTRL+C to quit[0m
+2025-12-11 21:57:27,222  * Restarting with stat
+2025-12-11 21:57:27,438  * Debugger is active!
+2025-12-11 21:57:27,438  * Debugger PIN: 440-240-000
+2025-12-11 21:57:29,877 127.0.0.1 - - [11/Dec/2025 21:57:29] "GET / HTTP/1.1" 200 -
+2025-12-11 21:57:30,048 127.0.0.1 - - [11/Dec/2025 21:57:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 21:57:30,072 127.0.0.1 - - [11/Dec/2025 21:57:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 21:57:30,074 127.0.0.1 - - [11/Dec/2025 21:57:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 21:57:30,177 127.0.0.1 - - [11/Dec/2025 21:57:30] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 21:57:30,273 127.0.0.1 - - [11/Dec/2025 21:57:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 21:57:30,383 {"csp-report":{"document-uri":"https://cuddly-zebra-56674w6779pc7jvg-5000.app.github.dev/","referrer":"https://cuddly-zebra-56674w6779pc7jvg.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://cuddly-zebra-56674w6779pc7jvg-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 21:57:30,383 127.0.0.1 - - [11/Dec/2025 21:57:30] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 21:58:06,699 127.0.0.1 - - [11/Dec/2025 21:58:06] "GET / HTTP/1.1" 200 -
+2025-12-11 21:58:27,560 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.24:5000
+2025-12-11 21:58:27,560 [33mPress CTRL+C to quit[0m
+2025-12-11 21:58:27,561  * Restarting with stat
+2025-12-11 21:58:27,780  * Debugger is active!
+2025-12-11 21:58:27,781  * Debugger PIN: 440-240-000
+2025-12-11 21:58:29,299 127.0.0.1 - - [11/Dec/2025 21:58:29] "GET / HTTP/1.1" 200 -
+2025-12-11 21:58:29,389 127.0.0.1 - - [11/Dec/2025 21:58:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 21:58:29,391 127.0.0.1 - - [11/Dec/2025 21:58:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 21:58:29,391 127.0.0.1 - - [11/Dec/2025 21:58:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 21:58:29,436 127.0.0.1 - - [11/Dec/2025 21:58:29] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 21:58:29,457 127.0.0.1 - - [11/Dec/2025 21:58:29] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 21:58:29,587 127.0.0.1 - - [11/Dec/2025 21:58:29] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-12-11 21:58:29,612 {"csp-report":{"document-uri":"https://cuddly-zebra-56674w6779pc7jvg-5000.app.github.dev/","referrer":"https://cuddly-zebra-56674w6779pc7jvg.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://cuddly-zebra-56674w6779pc7jvg-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 21:58:29,612 127.0.0.1 - - [11/Dec/2025 21:58:29] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 21:59:06,080 127.0.0.1 - - [11/Dec/2025 21:59:06] "[35m[1mPOST /login.html HTTP/1.1[0m" 500 -
+2025-12-11 21:59:06,138 127.0.0.1 - - [11/Dec/2025 21:59:06] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-12-11 21:59:06,153 127.0.0.1 - - [11/Dec/2025 21:59:06] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-12-11 21:59:06,183 127.0.0.1 - - [11/Dec/2025 21:59:06] "GET /login.html?__debugger__=yes&cmd=resource&f=console.png&s=MeXctQqTuloVShG9pyPr HTTP/1.1" 200 -
+2025-12-11 21:59:06,284 127.0.0.1 - - [11/Dec/2025 21:59:06] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-12-11 22:02:20,856 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.24:5000
+2025-12-11 22:02:20,857 [33mPress CTRL+C to quit[0m
+2025-12-11 22:02:20,859  * Restarting with stat
+2025-12-11 22:02:21,529  * Debugger is active!
+2025-12-11 22:02:21,531  * Debugger PIN: 440-240-000
+2025-12-11 22:02:23,826 127.0.0.1 - - [11/Dec/2025 22:02:23] "GET / HTTP/1.1" 200 -
+2025-12-11 22:02:24,034 127.0.0.1 - - [11/Dec/2025 22:02:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 22:02:24,048 127.0.0.1 - - [11/Dec/2025 22:02:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 22:02:24,066 127.0.0.1 - - [11/Dec/2025 22:02:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 22:02:24,173 127.0.0.1 - - [11/Dec/2025 22:02:24] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 22:02:24,283 127.0.0.1 - - [11/Dec/2025 22:02:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 22:02:24,407 {"csp-report":{"document-uri":"https://cuddly-zebra-56674w6779pc7jvg-5000.app.github.dev/","referrer":"https://cuddly-zebra-56674w6779pc7jvg.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://cuddly-zebra-56674w6779pc7jvg-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 22:02:24,408 127.0.0.1 - - [11/Dec/2025 22:02:24] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 22:02:41,924 127.0.0.1 - - [11/Dec/2025 22:02:41] "GET /signup.html HTTP/1.1" 200 -
+2025-12-11 22:02:41,979 127.0.0.1 - - [11/Dec/2025 22:02:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 22:02:41,981 127.0.0.1 - - [11/Dec/2025 22:02:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 22:02:41,984 127.0.0.1 - - [11/Dec/2025 22:02:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 22:02:42,015 127.0.0.1 - - [11/Dec/2025 22:02:42] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 22:02:42,039 127.0.0.1 - - [11/Dec/2025 22:02:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 22:02:56,393 127.0.0.1 - - [11/Dec/2025 22:02:56] "[35m[1mPOST /signup.html HTTP/1.1[0m" 500 -
+2025-12-11 22:02:56,446 127.0.0.1 - - [11/Dec/2025 22:02:56] "[36mGET /signup.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-12-11 22:02:56,449 127.0.0.1 - - [11/Dec/2025 22:02:56] "[36mGET /signup.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-12-11 22:02:56,489 127.0.0.1 - - [11/Dec/2025 22:02:56] "GET /signup.html?__debugger__=yes&cmd=resource&f=console.png&s=UyeK4QIaRMR8rAiUodLn HTTP/1.1" 200 -
+2025-12-11 22:02:56,541 127.0.0.1 - - [11/Dec/2025 22:02:56] "[36mGET /signup.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-12-11 22:03:12,179 127.0.0.1 - - [11/Dec/2025 22:03:12] "GET /signup.html HTTP/1.1" 200 -
+2025-12-11 22:06:10,607 127.0.0.1 - - [11/Dec/2025 22:06:10] "GET / HTTP/1.1" 200 -
+2025-12-11 22:06:10,829 127.0.0.1 - - [11/Dec/2025 22:06:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 22:06:10,842 127.0.0.1 - - [11/Dec/2025 22:06:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 22:06:10,855 127.0.0.1 - - [11/Dec/2025 22:06:10] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 22:06:10,961 127.0.0.1 - - [11/Dec/2025 22:06:10] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 22:06:11,074 127.0.0.1 - - [11/Dec/2025 22:06:11] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 22:06:11,239 {"csp-report":{"document-uri":"https://cuddly-zebra-56674w6779pc7jvg-5000.app.github.dev/","referrer":"https://cuddly-zebra-56674w6779pc7jvg-5000.app.github.dev/signup.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://cuddly-zebra-56674w6779pc7jvg-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 22:06:11,240 127.0.0.1 - - [11/Dec/2025 22:06:11] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 22:06:50,510 127.0.0.1 - - [11/Dec/2025 22:06:50] "[35m[1mPOST /login.html HTTP/1.1[0m" 500 -
+2025-12-11 22:06:50,569 127.0.0.1 - - [11/Dec/2025 22:06:50] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-12-11 22:06:50,574 127.0.0.1 - - [11/Dec/2025 22:06:50] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-12-11 22:06:50,607 127.0.0.1 - - [11/Dec/2025 22:06:50] "GET /login.html?__debugger__=yes&cmd=resource&f=console.png&s=UyeK4QIaRMR8rAiUodLn HTTP/1.1" 200 -
+2025-12-11 22:06:54,308 127.0.0.1 - - [11/Dec/2025 22:06:54] "GET / HTTP/1.1" 200 -
+2025-12-11 22:06:54,432 {"csp-report":{"document-uri":"https://cuddly-zebra-56674w6779pc7jvg-5000.app.github.dev/","referrer":"https://cuddly-zebra-56674w6779pc7jvg-5000.app.github.dev/signup.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://cuddly-zebra-56674w6779pc7jvg-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 22:06:54,432 127.0.0.1 - - [11/Dec/2025 22:06:54] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 22:07:02,952 127.0.0.1 - - [11/Dec/2025 22:07:02] "[35m[1mPOST /login.html HTTP/1.1[0m" 500 -
+2025-12-11 22:07:02,993 127.0.0.1 - - [11/Dec/2025 22:07:02] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-12-11 22:07:02,995 127.0.0.1 - - [11/Dec/2025 22:07:02] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-12-11 22:07:03,023 127.0.0.1 - - [11/Dec/2025 22:07:03] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=console.png&s=UyeK4QIaRMR8rAiUodLn HTTP/1.1[0m" 304 -
+2025-12-11 22:08:01,916  * Detected change in '/workspaces/2026SE_Task1_Xavier.P/main.py', reloading
+2025-12-11 22:08:01,945  * Restarting with stat
+2025-12-11 22:08:02,196  * Debugger is active!
+2025-12-11 22:08:02,196  * Debugger PIN: 440-240-000
+2025-12-11 22:08:04,292  * Detected change in '/workspaces/2026SE_Task1_Xavier.P/main.py', reloading
+2025-12-11 22:08:04,337  * Restarting with stat
+2025-12-11 22:08:04,638  * Debugger is active!
+2025-12-11 22:08:04,638  * Debugger PIN: 440-240-000
+2025-12-11 22:08:22,171 127.0.0.1 - - [11/Dec/2025 22:08:22] "[35m[1mPOST /login.html HTTP/1.1[0m" 500 -
+2025-12-11 22:08:22,224 127.0.0.1 - - [11/Dec/2025 22:08:22] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-12-11 22:08:22,306 127.0.0.1 - - [11/Dec/2025 22:08:22] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-12-11 22:08:22,338 127.0.0.1 - - [11/Dec/2025 22:08:22] "GET /login.html?__debugger__=yes&cmd=resource&f=console.png&s=ODx7UUiucoxp3f9dkIHg HTTP/1.1" 200 -
+2025-12-11 22:08:22,402 127.0.0.1 - - [11/Dec/2025 22:08:22] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-12-11 22:10:52,434  * Detected change in '/workspaces/2026SE_Task1_Xavier.P/main.py', reloading
+2025-12-11 22:10:52,462  * Restarting with stat
+2025-12-11 22:10:52,674  * Debugger is active!
+2025-12-11 22:10:52,675  * Debugger PIN: 440-240-000
+2025-12-11 22:10:57,055 127.0.0.1 - - [11/Dec/2025 22:10:57] "[31m[1mPOST /login.html HTTP/1.1[0m" 401 -
+2025-12-11 22:10:57,250 127.0.0.1 - - [11/Dec/2025 22:10:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 22:10:57,272 127.0.0.1 - - [11/Dec/2025 22:10:57] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 22:10:57,276 127.0.0.1 - - [11/Dec/2025 22:10:57] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 22:10:57,391 127.0.0.1 - - [11/Dec/2025 22:10:57] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 22:10:57,501 127.0.0.1 - - [11/Dec/2025 22:10:57] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 22:10:57,565 127.0.0.1 - - [11/Dec/2025 22:10:57] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-12-11 22:11:17,096 127.0.0.1 - - [11/Dec/2025 22:11:17] "[31m[1mPOST /login.html HTTP/1.1[0m" 401 -
+2025-12-11 22:11:17,151 127.0.0.1 - - [11/Dec/2025 22:11:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 22:11:17,154 127.0.0.1 - - [11/Dec/2025 22:11:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 22:11:17,158 127.0.0.1 - - [11/Dec/2025 22:11:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 22:11:17,188 127.0.0.1 - - [11/Dec/2025 22:11:17] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 22:11:17,210 127.0.0.1 - - [11/Dec/2025 22:11:17] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 22:20:28,785  * Detected change in '/workspaces/2026SE_Task1_Xavier.P/main.py', reloading
+2025-12-11 22:20:28,852  * Restarting with stat
+2025-12-11 22:20:29,154  * Debugger is active!
+2025-12-11 22:20:29,155  * Debugger PIN: 440-240-000
+2025-12-11 22:20:59,113 127.0.0.1 - - [11/Dec/2025 22:20:59] "[31m[1mPOST /login.html HTTP/1.1[0m" 401 -
+2025-12-11 22:20:59,334 127.0.0.1 - - [11/Dec/2025 22:20:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 22:20:59,342 127.0.0.1 - - [11/Dec/2025 22:20:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 22:20:59,359 127.0.0.1 - - [11/Dec/2025 22:20:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 22:20:59,469 127.0.0.1 - - [11/Dec/2025 22:20:59] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 22:20:59,580 127.0.0.1 - - [11/Dec/2025 22:20:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 22:21:22,960 127.0.0.1 - - [11/Dec/2025 22:21:22] "GET /signup.html HTTP/1.1" 200 -
+2025-12-11 22:21:23,017 127.0.0.1 - - [11/Dec/2025 22:21:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 22:21:23,020 127.0.0.1 - - [11/Dec/2025 22:21:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 22:21:23,023 127.0.0.1 - - [11/Dec/2025 22:21:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 22:21:23,053 127.0.0.1 - - [11/Dec/2025 22:21:23] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 22:21:23,076 127.0.0.1 - - [11/Dec/2025 22:21:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 22:21:33,481 127.0.0.1 - - [11/Dec/2025 22:21:33] "GET /signup.html HTTP/1.1" 200 -
+2025-12-11 22:21:33,542 127.0.0.1 - - [11/Dec/2025 22:21:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 22:21:33,546 127.0.0.1 - - [11/Dec/2025 22:21:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 22:21:33,548 127.0.0.1 - - [11/Dec/2025 22:21:33] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 22:21:33,578 127.0.0.1 - - [11/Dec/2025 22:21:33] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 22:21:33,600 127.0.0.1 - - [11/Dec/2025 22:21:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 22:21:33,660 127.0.0.1 - - [11/Dec/2025 22:21:33] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-12-11 22:24:52,315  * Detected change in '/workspaces/2026SE_Task1_Xavier.P/main.py', reloading
+2025-12-11 22:24:52,347  * Restarting with stat
+2025-12-11 22:24:52,582  * Debugger is active!
+2025-12-11 22:24:52,583  * Debugger PIN: 440-240-000
+2025-12-11 22:32:45,840  * Detected change in '/workspaces/2026SE_Task1_Xavier.P/main.py', reloading
+2025-12-11 22:32:45,868  * Restarting with stat
+2025-12-11 22:32:46,124  * Debugger is active!
+2025-12-11 22:32:46,125  * Debugger PIN: 440-240-000
+2025-12-11 23:04:08,732 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.24:5000
+2025-12-11 23:04:08,733 [33mPress CTRL+C to quit[0m
+2025-12-11 23:04:08,734  * Restarting with stat
+2025-12-11 23:04:09,006  * Debugger is active!
+2025-12-11 23:04:09,007  * Debugger PIN: 440-240-000
+2025-12-11 23:04:09,699 127.0.0.1 - - [11/Dec/2025 23:04:09] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-12-11 23:04:09,847 127.0.0.1 - - [11/Dec/2025 23:04:09] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-12-11 23:04:09,859 127.0.0.1 - - [11/Dec/2025 23:04:09] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-12-11 23:04:09,984 127.0.0.1 - - [11/Dec/2025 23:04:09] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=BBrMaxpVU1i8be4jCHmt HTTP/1.1" 200 -
+2025-12-11 23:04:10,170 127.0.0.1 - - [11/Dec/2025 23:04:10] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-12-11 23:04:41,635  * Detected change in '/workspaces/2026SE_Task1_Xavier.P/main.py', reloading
+2025-12-11 23:04:41,674  * Restarting with stat
+2025-12-11 23:04:41,963  * Debugger is active!
+2025-12-11 23:04:41,963  * Debugger PIN: 440-240-000
+2025-12-11 23:08:17,354 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.24:5000
+2025-12-11 23:08:17,355 [33mPress CTRL+C to quit[0m
+2025-12-11 23:08:17,355  * Restarting with stat
+2025-12-11 23:08:17,616  * Debugger is active!
+2025-12-11 23:08:17,616  * Debugger PIN: 440-240-000
+2025-12-11 23:08:20,310 127.0.0.1 - - [11/Dec/2025 23:08:20] code 400, message Bad request syntax ('*4')
+2025-12-11 23:08:20,310 127.0.0.1 - - [11/Dec/2025 23:08:20] "[31m[1m*4[0m" 400 -
+2025-12-11 23:08:20,321 127.0.0.1 - - [11/Dec/2025 23:08:20] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-12-11 23:08:20,477 127.0.0.1 - - [11/Dec/2025 23:08:20] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-12-11 23:08:20,491 127.0.0.1 - - [11/Dec/2025 23:08:20] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-12-11 23:08:20,619 127.0.0.1 - - [11/Dec/2025 23:08:20] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=1shtWcJRQkYCcYLjesQh HTTP/1.1" 200 -
+2025-12-11 23:08:20,752 127.0.0.1 - - [11/Dec/2025 23:08:20] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-12-11 23:09:49,671 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.24:5000
+2025-12-11 23:09:49,672 [33mPress CTRL+C to quit[0m
+2025-12-11 23:09:49,672  * Restarting with stat
+2025-12-11 23:09:50,217  * Debugger is active!
+2025-12-11 23:09:50,219  * Debugger PIN: 440-240-000
+2025-12-11 23:09:51,288 127.0.0.1 - - [11/Dec/2025 23:09:51] code 400, message Bad request syntax ('*4')
+2025-12-11 23:09:51,288 127.0.0.1 - - [11/Dec/2025 23:09:51] "[31m[1m*4[0m" 400 -
+2025-12-11 23:09:51,352 127.0.0.1 - - [11/Dec/2025 23:09:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-12-11 23:09:51,440 127.0.0.1 - - [11/Dec/2025 23:09:51] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-12-11 23:09:51,454 127.0.0.1 - - [11/Dec/2025 23:09:51] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-12-11 23:09:51,522 127.0.0.1 - - [11/Dec/2025 23:09:51] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=tIn4MyXAZAFhbXEcstN9 HTTP/1.1" 200 -
+2025-12-11 23:11:12,247  * Detected change in '/workspaces/2026SE_Task1_Xavier.P/main.py', reloading
+2025-12-11 23:11:12,293  * Restarting with stat
+2025-12-11 23:11:12,579  * Debugger is active!
+2025-12-11 23:11:12,580  * Debugger PIN: 440-240-000
+2025-12-11 23:11:17,534 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.24:5000
+2025-12-11 23:11:17,534 [33mPress CTRL+C to quit[0m
+2025-12-11 23:11:17,535  * Restarting with stat
+2025-12-11 23:11:17,793  * Debugger is active!
+2025-12-11 23:11:17,794  * Debugger PIN: 440-240-000
+2025-12-11 23:11:19,871 127.0.0.1 - - [11/Dec/2025 23:11:19] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-12-11 23:11:20,030 127.0.0.1 - - [11/Dec/2025 23:11:20] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-12-11 23:11:20,038 127.0.0.1 - - [11/Dec/2025 23:11:20] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-12-11 23:11:20,160 127.0.0.1 - - [11/Dec/2025 23:11:20] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=N2SXerAVMZBRLHGtxYQK HTTP/1.1" 200 -
+2025-12-11 23:13:01,166 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.24:5000
+2025-12-11 23:13:01,166 [33mPress CTRL+C to quit[0m
+2025-12-11 23:13:01,167  * Restarting with stat
+2025-12-11 23:13:01,466  * Debugger is active!
+2025-12-11 23:13:01,466  * Debugger PIN: 440-240-000
+2025-12-11 23:13:01,649 127.0.0.1 - - [11/Dec/2025 23:13:01] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-12-11 23:13:01,704 127.0.0.1 - - [11/Dec/2025 23:13:01] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-12-11 23:13:01,781 127.0.0.1 - - [11/Dec/2025 23:13:01] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-12-11 23:13:01,832 127.0.0.1 - - [11/Dec/2025 23:13:01] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=YbVUf3NMtTygT9ctOcrr HTTP/1.1" 200 -

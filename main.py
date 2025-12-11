@@ -3,14 +3,18 @@ from flask import redirect
 from flask import render_template
 from flask import request
 from flask import jsonify
+from flask import session
+from flask_session import Session
 import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
 import logging
-
+from redis import Redis
 import userManagement as dbHandler
 
 import bcrypt
+import os
+from datetime import timedelta
 
 # Code snippet for logging a message
 # app.logger.critical("message")
@@ -25,8 +29,40 @@ logging.basicConfig(
 
 # Generate a unique basic 16 key: https://acte.ltd/utils/randomkeygen
 app = Flask(__name__)
-app.secret_key = b"_5TvTgyH61Hn1pr9v;apl"
+app.secret_key = os.getenv("FLASK_SECRET_KEY", b"_5TvTgyH61Hn1pr9v;apl")
 csrf = CSRFProtect(app)
+
+# SESSION_TYPE = "redis"
+# SESSION_REDIS = Redis(host="localhost", port=6379)
+# app.config.from_object(__name__)
+redis_host = os.getenv("REDIS_HOST", "localhost")
+redis_port = int(os.getenv("REDIS_PORT", "6379"))
+redis_db = int(os.getenv("REDIS_DB", "0"))
+redis_client = Redis(host=redis_host, port=redis_port, db=redis_db)
+
+app.config.update(
+    SESSION_TYPE="redis",
+    SESSION_REDIS=redis_client,
+    SESSION_PERMANENT=True,
+    PERMANENT_SESSION_LIFETIME=timedelta(minutes=30),
+    SESSION_COOKIE_HTTPONLY=True,
+    SESSION_COOKIE_SECURE=(
+        os.getenv("SESSION_COOKIE_SECURE", "False").lower() == "true"
+    ),
+    SESSION_COOKIE_SAMESITE=os.getenv("SESSION_COOKIE_SAMESITE", "Lax"),
+)
+Session(app)
+
+
+@app.route("/set/")
+def set():
+    session["key"] = "value"
+    return "ok"
+
+
+@app.route("/get/")
+def get():
+    return session.get("key", "not set")
 
 
 # Redirect index.html to domain root for consistent UX
@@ -92,9 +128,8 @@ def login():
                 400,
             )
         hashedpw = dbHandler.getUsers(email)
-        print(hashedpw)
-        print(password.encode())
-        print(bcrypt.checkpw(password.encode(), hashedpw))
+        if not hashedpw:
+            return render_template("/login.html", error="Invalid credentials"), 401
         if bcrypt.checkpw(password.encode(), hashedpw):
             return render_template("/app.html")
         else:
