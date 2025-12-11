@@ -15,8 +15,43 @@
     <link href="static/css/bootstrap.min.css" rel="stylesheet" />
   </head>
   <body>
-    {% include "partials/menu.html" %} {% block content %}{% endblock %} {%
-    include "partials/footer.html" %}
+    {% include "partials/menu.html" %}
+    <!-- alert area -->
+    <div class="container mt-3">
+      {% if error %}
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{ error }}
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      {% endif %} {% if success %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ success }}
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      {% endif %} {% with messages = get_flashed_messages() %} {% if messages %}
+      {% for msg in messages %}
+      <div class="alert alert-info alert-dismissible fade show" role="alert">
+        {{ msg }}
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      {% endfor %} {% endif %} {% endwith %}
+    </div>
+    {% block content %}{% endblock %} {% include "partials/footer.html" %}
     <script src="static/js/bootstrap.bundle.min.js"></script>
     <script src="static/js/serviceWorker.js"></script>
     <script src="static/js/app.js"></script>

@@ -70,30 +70,35 @@ def privacy():
 
 
 # example CSRF protected form
-@app.route("/form.html", methods=["POST", "GET"])
-def form():
-    if request.method == "POST":
-        email = request.form["email"]
-        text = request.form["text"]
-        return render_template("/form.html")
-    else:
-        return render_template("/form.html")
+
+# @app.route("/form.html", methods=["POST", "GET"])
+# def form():
+#     if request.method == "POST":
+#         email = request.form["email"]
+#         text = request.form["text"]
+#         return render_template("/form.html")
+#     else:
+#         return render_template("/form.html")
 
 
 @app.route("/login.html", methods=["POST", "GET"])
 def login():
     if request.method == "POST":
-        email = request.form["email"]
-        password = request.form["password"]
-        print(password)
-        print(type(password))
-        password = password.encode()
-        print(type(password))
+        email = request.form.get("email")
+        password = request.form.get("password")
+        if not email or not password:
+            return (
+                render_template("/login.html", error="Email and password required"),
+                400,
+            )
         hashedpw = dbHandler.getUsers(email)
-        if bcrypt.checkpw(password, hashedpw):
+        print(hashedpw)
+        print(password.encode())
+        print(bcrypt.checkpw(password.encode(), hashedpw))
+        if bcrypt.checkpw(password.encode(), hashedpw):
             return render_template("/app.html")
         else:
-            return render_template("/login.html")
+            return render_template("/login.html", error="Invalid credentials"), 401
     else:
         return render_template("/login.html")
 
@@ -101,12 +106,19 @@ def login():
 @app.route("/signup.html", methods=["POST", "GET"])
 def signup():
     if request.method == "POST":
-        email = request.form["email"]
-        password = request.form["password"]
+        email = request.form.get("email")
+        password = request.form.get("password")
+        if not email or not password:
+            return (
+                render_template("/signup.html", error="Email and password required"),
+                400,
+            )
         encodedpass = password.encode()
-        hashedpw = bcrypt.hashpw(encodedpass, bcrypt.gensalt())
-        dbHandler.insertContact(email, hashedpw)
-        return render_template("/signup.html")
+        hashedpw = bcrypt.hashpw(encodedpass, bcrypt.gensalt(6))
+        if dbHandler.insertContact(email, hashedpw):
+            return render_template("/login.html", success="Account created"), 200
+        else:
+            return render_template("/signup.html", error="Email already exists"), 409
     else:
         return render_template("/signup.html")
 
