@@ -67,9 +67,12 @@ def index():
     return render_template("/index.html")
 
 
-@app.route("/devlog.html")
+@app.route("/devlog.html", methods=["GET", "POST"])
 def devlog():
     if "email" in session:
+        if request.method == "POST":
+            print()
+            # todo: add form thing for adding devlogs
         user = session["email"]
         return render_template("/devlog.html", success=f"Logged in as {user}")
     else:
@@ -118,16 +121,19 @@ def login():
 @app.route("/signup.html", methods=["POST", "GET"])
 def signup():
     if request.method == "POST":
+        name = request.form.get("name")
         email = request.form.get("email")
         password = request.form.get("password")
-        if not email or not password:
+        if not email or not password or not name:
             return (
-                render_template("/signup.html", error="Email and password required"),
+                render_template(
+                    "/signup.html", error="Email, name and password required"
+                ),
                 400,
             )
         encodedpass = password.encode()
         hashedpw = bcrypt.hashpw(encodedpass, bcrypt.gensalt(6))
-        if dbHandler.insertContact(email, hashedpw):
+        if dbHandler.insertContact(email, name, hashedpw):
             return render_template("/login.html", success="Account created"), 200
         else:
             return render_template("/signup.html", error="Email already exists"), 409
