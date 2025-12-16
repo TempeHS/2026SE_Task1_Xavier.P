@@ -11,9 +11,11 @@ from flask_csp.csp import csp_header
 import logging
 import userManagement as dbHandler
 
+import math
+
 import bcrypt
 import os
-from datetime import timedelta
+import datetime
 
 # Code snippet for logging a message
 # app.logger.critical("message")
@@ -30,6 +32,26 @@ logging.basicConfig(
 app = Flask(__name__)
 app.secret_key = b"_5TvTgyH61Hn1pr9v;apl"
 csrf = CSRFProtect(app)
+
+app.config["SESSION_COOKIE_SECURE"] = True
+app.config["PERMANENT_SESSION_LIFETIME"] = datetime.timedelta(minutes=30)
+
+
+@app.before_request
+def check_session_timeout():
+    if "email" in session:
+        session.permanent = True
+        if "last_activity" in session:
+            last_timestamp = session["last_activity"]
+            if isinstance(last_timestamp, datetime.datetime):
+                last_timestamp = last_timestamp.timestamp()
+            current_timestamp = datetime.datetime.now().timestamp()
+            time_elapsed = current_timestamp - last_timestamp
+            if time_elapsed > 1800:
+                app_log.warning("Session timeout")
+                session.clear()
+                return redirect("/login.html?timeout=true")
+        session["last_activity"] = datetime.datetime.now().timestamp()
 
 
 # Redirect index.html to domain root for consistent UX
@@ -64,17 +86,82 @@ def root():
     }
 )
 def index():
-    return render_template("/index.html")
+    return render_template("/login.html")
 
 
 @app.route("/devlog.html", methods=["GET", "POST"])
 def devlog():
     if "email" in session:
-        if request.method == "POST":
-            print()
-            # todo: add form thing for adding devlogs
         user = session["email"]
-        return render_template("/devlog.html", success=f"Logged in as {user}")
+        if request.method == "POST":
+            name = dbHandler.getName(user)
+            proj_name = request.form.get("proj_name")
+            start_time_str = request.form.get("start_time")  # convert to py date
+            end_time_str = request.form.get("end_time")  # convert to py date
+            repo = request.form.get("repo")
+            notes = request.form.get("notes")
+            if (
+                not proj_name
+                or not start_time_str
+                or not end_time_str
+                or not repo
+                or not notes
+            ):
+                return (
+                    render_template("/devlog.html", error="All fields are required"),
+                    400,
+                )
+            try:
+                start_time = datetime.datetime.fromisoformat(start_time_str)
+                end_time = datetime.datetime.fromisoformat(end_time_str)
+            except ValueError:
+                return render_template("/devlog.html", error="Invalid date format"), 400
+            if end_time <= start_time:
+                return (
+                    render_template(
+                        "/devlog.html", error="End time must be after start time"
+                    ),
+                    400,
+                )
+            notes = notes.strip()
+            time_diff = end_time - start_time
+            total_minutes = time_diff.total_seconds() / 60
+            time_worked = math.ceil(total_minutes / 15) * 15
+            entry_time = datetime.datetime.now()
+            dbHandler.addLogs(
+                user,
+                name,
+                proj_name,
+                start_time,
+                end_time,
+                entry_time,
+                time_worked,
+                repo,
+                notes,
+            )
+            entries = dbHandler.getLogs()
+            return render_template(
+                "/devlog.html", success="Entry added", entries=entries
+            )
+        search_term = request.args.get("search", "").strip()
+        filter_date = request.args.get("filter_date", "").strip()
+        sort_by = request.args.get("sort_by", "entry_time")
+        sort_order = request.args.get("sort_order", "DESC")
+        entries = dbHandler.getLogs(
+            search_term=search_term if search_term else None,
+            filter_by=filter_date if filter_date else None,
+            sort_by=sort_by,
+            sort_order=sort_order,
+        )
+        return render_template(
+            "/devlog.html",
+            success=f"Logged in as {user}",
+            entries=entries,
+            search_term=search_term,
+            filter_date=filter_date,
+            sort_by=sort_by,
+            sort_order=sort_order,
+        )
     else:
         return render_template("/login.html")
 
@@ -133,7 +220,7 @@ def signup():
             )
         encodedpass = password.encode()
         hashedpw = bcrypt.hashpw(encodedpass, bcrypt.gensalt(6))
-        if dbHandler.insertContact(email, name, hashedpw):
+        if dbHandler.insertContact(email.lower().strip(), name.strip(), hashedpw):
             return render_template("/login.html", success="Account created"), 200
         else:
             return render_template("/signup.html", error="Email already exists"), 409
